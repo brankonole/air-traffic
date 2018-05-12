@@ -1,6 +1,17 @@
 @import "typography";
 
-body { min-width: 320px; }
+html { height: 100%; }
+body {
+	min-width: 320px;
+    height: 100%;
+    padding-bottom: 100px;
+    border-bottom: 5px solid #94CF59;
+	background-image: url(../../images/tree.jpg);
+    background-position: 100% calc(100% + 65px);
+    background-size: 200px;
+    background-repeat: no-repeat;
+    background-color: #F6F6F6;
+}
 a, a:hover, a:focus, a:active { text-decoration: none; }
 img { max-width: 100%; }
 input[type="radio"] { -webkit-appearance: radio; }
