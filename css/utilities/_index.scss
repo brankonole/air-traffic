@@ -1,0 +1,135 @@
+@import "reset";
+
+// Mixins
+@mixin clearfix {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+// Mixins for positioning, if you want to exclude one of "top left bottom right"
+// just enter "no" instead
+@mixin position($position, $args) {
+	position: $position;
+	$offsets: top left bottom right;
+
+	@each $o in $offsets {
+		$value: nth($args, index($offsets, $o));
+
+		@if $value != "no" {
+			#{$o}: $value;
+		}
+	}
+}
+
+@mixin absolute($args) {
+	@include position(absolute, $args);
+}
+
+@mixin fixed($args) {
+	@include position(fixed, $args);
+}
+
+@mixin relative($args) {
+	@include position(relative, $args);
+}
+
+// Vertical align
+@mixin vertical-align {
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+// Absolute center
+@mixin absolute-center {
+	@include absolute(50% 50% no no);
+	transform: translate(-50%, -50%);
+}
+
+// Fixed center
+@mixin fixed-center {
+	@include fixed(50% 50% no no);
+	transform: translate(-50%, -50%);
+}
+
+// Relative center
+@mixin relative-center {
+	@include relative(50% 50% no no);
+	transform: translate(-50%, -50%);
+}
+
+// Retina media query
+// Example
+// @include retina(2, 200);
+@mixin retina ($pixelRatio, $dpi) {
+	@media
+	(-webkit-min-device-pixel-ratio: $pixelRatio),
+	(   min--moz-device-pixel-ratio: $pixelRatio),
+	(   -moz-min-device-pixel-ratio: $pixelRatio),
+	(     -o-min-device-pixel-ratio: $pixelRatio/1),
+	(        min-device-pixel-ratio: $pixelRatio),
+	(                min-resolution: $dpi + 'dpi'),
+	(                min-resolution: $pixelRatio + 'dppx') {
+	    @content;
+	}
+}
+
+// Helper classes
+.clear { clear: both; }
+.cursor-default { cursor: default !important; }
+.hide-element { display: none; }
+
+// Truncate text with ...
+.truncate {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.wide-proportion-wrapper {
+	position: relative;
+	padding-top: 56.25%;
+	width: 100%;
+	height: 0;
+	overflow: hidden;
+}
+.bg-wide-proportion-wrapper {
+	@extend .wide-proportion-wrapper;
+	background-position: center;
+	background-size: cover;
+}
+
+// Z indexes
+$z-indexes: (
+	loader: 9999
+);
+
+$container-max-widths: (
+	sm: 100%,
+	md: 100%,
+	lg: 1200px,
+	xl: 1440px
+);
+
+// Breakpoints
+$breakpoint-desktop: 1441px;
+$breakpoint-laptop: 1200px;
+$breakpoint-tablet: 1024px;
+$breakpoint-mobile: 768px;
+$breakpoint-small: 480px;
+
+$breakpoint-desktop-min: 1439px;
+$breakpoint-laptop-min: 1199px;
+$breakpoint-tablet-min: 1023px;
+$breakpoint-mobile-min: 767px;
+$breakpoint-small-min: 479px;
+
+// Bootstrap breakpoints
+$grid-breakpoints: (
+	xs: 0,
+	sm: $breakpoint-mobile,
+	md: $breakpoint-tablet,
+	lg: $breakpoint-laptop,
+	xl: $breakpoint-desktop
+);

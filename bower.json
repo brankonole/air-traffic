@@ -1,0 +1,29 @@
+{
+  "name": "app",
+  "description": "Starting point",
+  "main": "gulpfile.js",
+  "authors": [
+    "Branko Novaković"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": null,
+    "velocity": null,
+    "select2": null,
+    "malihu-custom-scrollbar-plugin": null,
+    "jquery-touchswipe": null,
+    "jquery-validation": null,
+    "moment": null,
+    "popper.js": null,
+    "bootstrap": "4.0"
+  }
+}
