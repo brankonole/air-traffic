@@ -1,17 +1,12 @@
-// Bootstrap
-button:focus { outline: none; }
-.btn-link:hover, .btn-link:focus { text-decoration: none; }
-.container { width: 100%; }
-.carousel-control {
-	width: auto;
-	padding: 20px;
-	top: 50%;
-	bottom: auto;
-	transform: translateY(-50%);
-	font-size: 40px;
-	&.left, &.right { background: none; }
-}
-
-@media (min-width: $breakpoint-desktop) {
-	.carousel-control { padding: 40px; font-size: 50px; }
+// Noty
+.noty_theme__mint.noty_type__error {
+    padding-left: 40px;
+    border: 1px solid #ca5a65;
+    border-bottom-width: 4px;
+    color: #333;
+    background-image: url(https://d30y9cdsu7xlg0.cloudfront.net/png/165099-200.png);
+    background-position: 4px 5px;
+    background-size: 30px;
+    background-repeat: no-repeat;
+    .noty_body { background-color: #fff; }
 }

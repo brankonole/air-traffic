@@ -1,26 +1,57 @@
 <!doctype html>
 <html lang="en">
+
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACHElEQVRYR+2WgTEEQRRE+zKQASJABIgAESACRIAIEAEiQATIgAiQgQyop6bVN3czO3t7VVeq7ldtbe3dzPz+3T1/ZqQ5x2jO+bUA8O8YWJK0I2lX0oqk9eShF0nvku4lPUj6bPVWKwMkPpJ0nBI8SSIpDwEQHoBtSbqQdNUCpAUAyR8lfSQAVFoLmLmUtCxpuwtEFwCSv0k6T4u2Mss42DpLUhUlqQFw5bdZcssB3dED6J/TDoj9GhM1AKC3rq78IOkLqJvMAyQDFG/+cwAMr7DeWJQAmPqN5G4mkhxtMZnNly8IYAwaQeAJxvMek6IEgGQk4k0YEKYqJTcYg4gJYYEnMvMzvgQgnwB9gKAyAzpNlPPNwhjVwTe7xbRTCPLw/IkSAKpkkqvNv5GCSs2Q/WCA/MdvNmn+/QuiBOArYyf/RksWdU+AbrTn7ehaoypB12QARI1nDqBLArTdlHSYyr2W9Bw0HyxBlwnJiw9sKvSO+3ywCSdtQ/Su9YCZbkO2HAmj0VobEQcX0sAiMVUjYiKUrknaC842iLvU9+NxzHHNWMY4OVOnasVuNmwt9ERvhxsS+gOQeE2JGBfbLX3Bck48EVuOY6Sg63HS9YnBx3GsGCa4F5yE5lMCg+bciFaTaavXsy4GctqpCpOhK7RHDyAHsnBgIUUux0TArQAiEB8qVBo94Esp4GZ+Ke2jfa+xfRnotXjL4AWAuTPwDVaQmCF9SHQAAAAAAElFTkSuQmCC">
+	<link rel="icon" href="./images/plane-favicon.png">
 
-	<title>Application</title>
-	<link rel="stylesheet" href="css/style.css" />
+	<title>Air Traffic</title>
+	<link rel="stylesheet" href="/css/style.css" />
 </head>
+
 <body>
 	<header class="l-header">
-		<h1 class="title"><span>Fly with us</span></h1>
+		<h1 class="title">
+			<span>Fly with us</span>
+		</h1>
 	</header>
+
+	<main class="l-main">
+		<div class="page-wrapper js-page js-home-page">
+			<div class="p-data-table js-table-wrapper">
+				<div class="container">
+					<table class="table table-bordered table-striped table-hover js-table">
+						<thead>
+							<tr>
+								<th scope="col">Id</th>
+								<th scope="col">Direction</th>
+								<th scope="col">Altitude</th>
+								<th scope="col">Flight code</th>
+							</tr>
+						</thead>
+						<tbody></tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+		<div class="page-wrapper js-page js-details-page">
+			<div class="p-details js-details"></div>
+		</div>
+	</main>
+
+	<footer class="l-footer"></footer>
 
 	<div class="c-loader" id="loader">
 		<svg class="circular" viewBox="25 25 50 50">
-			<circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+			<circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
 		</svg>
 	</div>
 
-	<script src="scripts/libraries.min.js"></script>
-	<script src="scripts/bundle.min.js"></script>
+	<script src="/scripts/libraries.min.js"></script>
+	<script src="/scripts/bundle.min.js"></script>
 </body>
+
 </html>

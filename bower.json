@@ -24,6 +24,9 @@
     "jquery-validation": null,
     "moment": null,
     "popper.js": null,
-    "bootstrap": "4.0"
+    "bootstrap": "4.0",
+    "datatables.net": "^1.10.16",
+    "datatables.net-dt": "^3.2.2",
+    "noty": "^3.1.4"
   }
 }

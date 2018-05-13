@@ -10,16 +10,18 @@
   "author": "Branko Novaković",
   "license": "",
   "devDependencies": {
+    "browser-sync": "*",
+    "connect-history-api-fallback": "^1.5.0",
     "gulp": "*",
     "gulp-autoprefixer": "*",
     "gulp-concat": "*",
+    "gulp-htmlmin": "^4.0.0",
     "gulp-load-plugins": "*",
     "gulp-notify": "*",
     "gulp-plumber": "*",
     "gulp-sass": "*",
     "gulp-sourcemaps": "*",
     "gulp-uglify": "*",
-    "gulp-util": "*",
-    "browser-sync": "*"
+    "gulp-util": "*"
   }
 }

@@ -11,12 +11,12 @@ APP.util = (function () {
 		 * @param  { String } 	option    Show or hide
 		 */
 		loader: function (option) {
-			window.loader = window.loader || document.getElementById('loader');
+			window.$loader = window.$loader || $('#loader');
 
 			if (option === 'show') {
-				window.loader.velocity('fadeIn', 100);
+				window.$loader.fadeIn(100);
 			} else if (option === 'hide') {
-				window.loader.velocity('fadeOut', 100);
+				window.$loader.fadeOut(100);
 			}
 		},
 
