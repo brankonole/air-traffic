@@ -16,12 +16,23 @@
         justify-content: center;
         align-items: center;
         .media-body { flex: unset; }
-        .details-subheading { display: inline-block; border-bottom: 2px solid #bdbdbd; }
+        .details-subheading {
+            display: inline-block;
+            margin-bottom: 0.5rem;
+        }
+        .details-subheading-content {
+            display: inline;
+            border-bottom: 2px solid #bdbdbd;
+        }
     }
     img { margin-right: 3rem !important; }
     .details-strong { font-weight: bold; }
 
     @media (max-width: $breakpoint-mobile) {
         img { width: 150px; margin-right: 1rem !important;}
+    }
+
+    @media (max-width: $breakpoint-small) {
+        .details-content .media-body P { font-size: 14px; }
     }
 }

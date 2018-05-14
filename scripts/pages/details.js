@@ -21,7 +21,9 @@ APP.detailsPage = (id) => {
                             <img class="align-self-center mr-3 js-flight-img-placeholder" src="http://via.placeholder.com/250x150" alt="Placeholder image">
                             <img class="align-self-center mr-3 js-flight-img" src="https://logo.clearbit.com/${d.Man}.com?s=300" alt="${d.Man} image" style="display: none">
                             <div class="media-body">
-                                <h5 class="mt-0 details-subheading">${d.Mdl || 'n/a'}</h5>
+                                <div class="details-subheading">
+                                    <h5 class="mt-0 details-subheading-content">${d.Mdl || 'n/a'}</h5>
+                                </div>
                                 <p class="mt-0">
                                     <span class="details-strong">From:</span> ${d.From || 'n/a'}
                                 </p>
