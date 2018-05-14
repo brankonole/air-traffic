@@ -10,11 +10,7 @@ APP.detailsPage = (id) => {
         const d = data.acList[id]
 
         if (!d) {
-            new Noty({
-                type: 'error',
-                text: 'Error, the data for this flight doesn\'t exists',
-                timeout: 5000
-            }).show()
+            APP.helpers.errorMessage('Error, the data for this flight doesn\'t exists')
 
             return
         }

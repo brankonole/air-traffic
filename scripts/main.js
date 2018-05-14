@@ -19,10 +19,6 @@ var APP = APP || {};
     APP.router.check()
 
     document.addEventListener('ajax-error', () => {
-        new Noty({
-            type: 'error',
-            text: 'Error, please try again later',
-            timeout: 5000
-        }).show();
+        APP.helpers.errorMessage();
     })
 }());

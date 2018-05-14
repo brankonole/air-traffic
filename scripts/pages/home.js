@@ -94,7 +94,7 @@ APP.homePage = () => {
             }
 
             getFlights()
-            setInterval(getFlights, 6000)
+            setInterval(getFlights, 60000)
         }  
     })
 }

@@ -9,14 +9,18 @@ APP.helpers = {
             navigator.geolocation.getCurrentPosition(function (pos) {
                 resolve(pos)
             }, function (err) {
-                new Noty({
-                    type: 'error',
-                    text: 'Error, location is required',
-                    timeout: 5000
-                }).show()
+                APP.helpers.errorMessage('Error, location is required')
 
                 reject(err)
             });
         })
+    },
+
+    errorMessage: (message = 'Error, please try again later') => {
+        new Noty({
+            type: 'error',
+            text: message,
+            timeout: 5000
+        }).show();
     }
 }
