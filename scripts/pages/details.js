@@ -26,7 +26,7 @@ APP.detailsPage = (id) => {
                                     <span class="details-strong">From:</span> ${d.From || 'n/a'}
                                 </p>
                                 <p class="mt-0">
-                                    <span class="details-strong">To:</span> ${data.To || 'n/a'}
+                                    <span class="details-strong">To:</span> ${d.To || 'n/a'}
                                 </p>
                             </div>
                         </div>
@@ -42,7 +42,7 @@ APP.detailsPage = (id) => {
         if (APP.flightsData) {
             initDetails(APP.flightsData)
         } else {
-            APP.dataService.getFlights().then((response) => {
+            APP.dataService.getFlights(location).then((response) => {
                 initDetails(response)
                 APP.flightsData = response
             })

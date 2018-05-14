@@ -7,7 +7,12 @@ APP.helpers = {
     getUserLocation: () => {
         return new Promise(function(resolve, reject) {
             navigator.geolocation.getCurrentPosition(function (pos) {
-                resolve(pos)
+                userPos = {
+                    lat: pos.coords.latitude,
+                    lng: pos.coords.longitude
+                }
+                
+                resolve(userPos)
             }, function (err) {
                 APP.helpers.errorMessage('Error, location is required')
 

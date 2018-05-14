@@ -87,7 +87,7 @@ APP.homePage = () => {
             initTable(formatDataForDT(APP.flightsData))
         } else {
             const getFlights = () => {
-                APP.dataService.getFlights().then((response) => {
+                APP.dataService.getFlights(location).then((response) => {
                     initTable(formatDataForDT(response))
                     APP.flightsData = response
                 })
