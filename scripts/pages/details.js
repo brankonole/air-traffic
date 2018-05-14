@@ -7,7 +7,7 @@ APP.detailsPage = (id) => {
     const $details = $('.js-details')
     
     function initDetails(data) {
-        const d = data.acList[id]
+        const d = data.acList[id - 1]
 
         if (!d) {
             APP.helpers.errorMessage('Error, the data for this flight doesn\'t exists')
